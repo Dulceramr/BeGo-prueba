@@ -1,0 +1,78 @@
+.order-container {
+    color: white;
+    top: 17rem;
+    position: absolute;
+    left: 8.33%;
+    right: 8.33%;
+    width: 83.3%;
+    height: auto;
+}
+
+.orders-content {
+    margin-top: 2rem;
+}
+
+.order-information {
+    background-color: linear-gradient(45deg, #080C0F 0%, rgba(39,39,39,0) 100%);
+    border: #7B7B7B solid 1px;
+    border-radius: 25px;
+}
+
+.transport-container {
+    padding: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.freight-icon {
+    padding-right: 10px;
+}
+
+.transport-vehicle {
+    font-size: 16px;
+}
+
+.status {
+    font-size: 12px;
+    font-weight: 500;
+    text-align: right;
+}
+
+.pickup-dropoff {
+    color: #7b7b7b;
+    font-size: 10px;
+    font-weight: 500;
+}
+
+.transport-date-information {
+    border-top: #7B7B7B solid 1px;
+    padding: 0;
+}
+
+.resume-button {
+    border-radius: 21.93px;
+    background-color: #FFFF00;
+    box-shadow: inset -2px -2px 4px 0 #C2C200, inset 2px 2px 4px 0 #FFFF80;
+    width: 130px;
+    height: 43.87px;
+    font-size: 14px;
+    font-weight: 900;
+}
+
+.Eye-icon {
+    margin: 4px 0 0 9px;
+}
+
+.resume-text {
+    margin-top: 5px;
+}
+
+.pickup-button {
+    border: #7B7B7B solid 1px;
+    border-radius: 25px;
+    width: 199px;
+    height: 50px;
+    background-color: transparent;
+    color: white;
+}

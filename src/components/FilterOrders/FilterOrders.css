@@ -12,7 +12,6 @@
     color: white;
     display: flex;
     justify-content: space-between;
-    font-family: 'Open Sans', sans-serif;
     font-size: 18px;
 }
 
@@ -29,8 +28,8 @@
 .search {
     margin-top: 2rem;
     border-bottom: #7B7B7B solid 1px;
-    padding-bottom: 7px;
-    width: 80%;
+    padding-bottom: 15px;
+    width: 87%;
     margin-left: 7px;
 }
 
@@ -44,6 +43,7 @@
     margin: 0 15px;
     background-color: transparent;
     border: none;
+    color: white;
 }
 
 .search-input::placeholder {
