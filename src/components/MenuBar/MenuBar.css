@@ -1,0 +1,21 @@
+.menu-bar {
+    display: flex;
+    position: absolute;
+    top: 2rem;
+    left: 8.33%;
+    right: 8.33%;
+    width: 83.3%;
+    justify-content: space-between;
+}
+
+.arrow {
+    transform: rotate(-90deg);
+}
+
+.title {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+}
+

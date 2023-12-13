@@ -1,0 +1,51 @@
+.filter-container {
+    display: flex;
+    position: absolute;
+    top: 7rem;
+    left: 8.33%;
+    right: 8.33%;
+    width: 83.3%;
+    flex-direction: column; 
+}
+
+.state-order {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+}
+
+.upcoming {
+    color: #FFFF00;
+    font-weight: 900;
+}
+
+.completed-past {
+    color: white;
+    font-weight: 300;
+}
+
+.search {
+    margin-top: 2rem;
+    border-bottom: #7B7B7B solid 1px;
+    padding-bottom: 7px;
+    width: 80%;
+    margin-left: 7px;
+}
+
+.search-image {
+    height: 17px;
+    width: 17px;
+    margin: 0 13px;
+}
+
+.search-input {
+    margin: 0 15px;
+    background-color: transparent;
+    border: none;
+}
+
+.search-input::placeholder {
+    color: #7B7B7B;
+}
