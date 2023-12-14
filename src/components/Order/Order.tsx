@@ -16,15 +16,14 @@ export const Order: React.FC = () => {
                 </div>
                 <div className='transport-date-information'>
                     <div className='transportation-image'></div>
-                    <div className='pickup-dropoff'>PICKUP</div>
-                    <div className='pickup-adress'>New York 25 Mortada street, Gainalkes..</div>
-                    <div className='pickup-time'>01/04/23 10:45</div>
-                    <div className='pickup-dropoff'>DROPOFF</div>
-                    <div className='dropoff-adress'>New York 1789 NJ-27, Edison, 08817..</div>
-                    <div className='dropoff-time'>01/04/23 17:30</div>
-                    <button className='pickup-button'>Start pickup in 1:30:00</button>
+                    <div className='pickup-dropoff pickup'>PICKUP</div>
+                    <div className='pickup-adress'>Dir</div>
+                    <div className='pickup-time'>FyH1</div>
+                    <div className='pickup-dropoff dropoff'>DROPOFF</div>
+                    <div className='dropoff-adress'>Dir2</div>
+                    <div className='dropoff-time'>FyH2</div>
+                    <button className='pickup-button'>piBut</button>
                     <button className='resume-button'>
-                        Resume
                         <img src='/eye.svg' alt='Eye icon' className='Eye-icon'/>
                     </button>
                 </div>

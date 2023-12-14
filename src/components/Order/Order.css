@@ -45,18 +45,13 @@
     font-weight: 500;
 }
 
-.transport-date-information {
-    border-top: #7B7B7B solid 1px;
-    padding: 0;
-}
-
 .resume-button {
     border-radius: 21.93px;
     background-color: #FFFF00;
     box-shadow: inset -2px -2px 4px 0 #C2C200, inset 2px 2px 4px 0 #FFFF80;
-    width: 130px;
+    /* width: 130px;
     height: 43.87px;
-    font-size: 14px;
+    font-size: 14px; */
     font-weight: 900;
 }
 
@@ -71,8 +66,80 @@
 .pickup-button {
     border: #7B7B7B solid 1px;
     border-radius: 25px;
-    width: 199px;
-    height: 50px;
+    /* width: 199px;
+    height: 50px; */
     background-color: transparent;
     color: white;
+}
+
+.transport-date-information {
+    border-top: #7B7B7B solid 1px;
+    padding: 0;
+    height: 15rem;
+    display: grid;
+    grid-template-columns: 16.66% 40.28% 13.89% 8.3% 20.83%;
+    grid-template-rows: 15.38% 4.8% 14.42% 11.54% 3.85% 14.42% 15.38% 20.19%;
+}
+
+.transportation-image {
+  grid-row-start: 3;
+  grid-row-end: 8;
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+.pickup {
+    grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 2;
+  grid-column-end: 5;
+}
+
+.pickup-adress {
+    grid-row-start: 3;
+  grid-row-end: 4;
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+.dropoff {
+    grid-row-start: 5;
+  grid-row-end: 6;
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+.dropoff-adress{
+    grid-row-start: 6;
+  grid-row-end: 7;
+  grid-column-start: 2;
+  grid-column-end: 4;
+}
+
+.pickup-time {
+    grid-row-start: 3;
+  grid-row-end: 4;
+  grid-column-start: 5;
+  grid-column-end: 6;
+}
+
+.dropoff-time {
+    grid-row-start: 6;
+  grid-row-end: 7;
+  grid-column-start: 5;
+  grid-column-end: 6;
+}
+
+.resume-button {
+    grid-row-start: 8;
+  grid-row-end: 9;
+  grid-column-start: 3;
+  grid-column-end: 6;
+}  
+
+.pickup-button {
+    grid-row-start: 8;
+  grid-row-end: 9;
+  grid-column-start: 1;
+  grid-column-end: 3;
 }
