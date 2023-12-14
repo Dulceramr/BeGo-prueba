@@ -7,6 +7,7 @@ export interface OrderType {
     destinations: {
       address: string;
       nickname: string;
+      start_date: number;
     }[];
 }
 

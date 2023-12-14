@@ -7,6 +7,25 @@ export const Order: React.FC<OrderProps> = ({ orderData }) => {
     const pickupAddress = destinations[0].address;
     const dropoffAddress = destinations[1].address;
 
+    const [timeRemaining, setTimeRemaining] = useState<number>(0);
+    const [buttonEnabled, setButtonEnabled] = useState<boolean>(false);
+
+    useEffect(() => {
+        const currentDate = new Date().getTime();
+        const orderStartDate = destinations[0].start_date;
+        const timeDifference = orderStartDate - currentDate;
+
+        const minutesRemaining = Math.ceil(timeDifference / (1000 * 60));
+
+        setButtonEnabled(minutesRemaining > 0);
+
+        setTimeRemaining(minutesRemaining);
+    }, [destinations]);
+
+    const handleButtonClick = () => {
+        console.log("Navegar")
+    };
+
   return (
     <div className='order-container'>
         <p>Order #{order_number}</p>
@@ -37,7 +56,15 @@ export const Order: React.FC<OrderProps> = ({ orderData }) => {
                         <span className='date'>01/04/23</span>
                         <span className='time'>17:30</span>
                     </div>
-                    <button className='pickup-button'>Start pickup in 1:30:00</button>
+                    {buttonEnabled && (
+                        <button 
+                        className='pickup-button'
+                        onClick={handleButtonClick}
+                        disabled={!buttonEnabled}
+                        >
+                            {`Start pickup in ${timeRemaining}`}  
+                        </button>
+                    )}
                     <button className='resume-button'>
                         Resume
                         <img src='/eye.svg' alt='Eye icon' className='Eye-icon'/>
