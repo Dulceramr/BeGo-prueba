@@ -1,11 +1,15 @@
 .menu-bar {
     display: flex;
-    position: absolute;
+    position: relative;
     top: 2rem;
-    left: 8.33%;
+    /* left: 8.33%;
     right: 8.33%;
-    width: 83.3%;
+    width: 83.3%; */
     justify-content: space-between;
+    max-width: 100%;
+    overflow: hidden;
+    margin-left: 8vw;
+  margin-right: 8vw;
 }
 
 .arrow {

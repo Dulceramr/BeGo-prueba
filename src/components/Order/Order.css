@@ -1,11 +1,16 @@
+
 .order-container {
     color: white;
     top: 17rem;
-    position: absolute;
-    left: 8.33%;
+    position: relative;
+    /* left: 8.33%;
     right: 8.33%;
-    width: 83.3%;
+    width: 83.3%; */
     height: auto;
+    max-width: 100%;
+    overflow: hidden;
+    margin-left: 8vw;
+  margin-right: 8vw;
 }
 
 .orders-content {
@@ -49,9 +54,9 @@
     border-radius: 21.93px;
     background-color: #FFFF00;
     box-shadow: inset -2px -2px 4px 0 #C2C200, inset 2px 2px 4px 0 #FFFF80;
-    /* width: 130px;
+    width: 130px;
     height: 43.87px;
-    font-size: 14px; */
+    font-size: 14px;
     font-weight: 900;
 }
 
@@ -66,8 +71,8 @@
 .pickup-button {
     border: #7B7B7B solid 1px;
     border-radius: 25px;
-    /* width: 199px;
-    height: 50px; */
+    width: 199px;
+    height: 50px;
     background-color: transparent;
     color: white;
 }
@@ -99,8 +104,16 @@
     grid-row-start: 3;
   grid-row-end: 4;
   grid-column-start: 2;
-  grid-column-end: 3;
+  grid-column-end: 4;
+  
 }
+
+.adress {
+    display: flex;
+  flex-direction: column;
+  font-size: 12px;
+}
+
 
 .dropoff {
     grid-row-start: 5;
@@ -121,6 +134,29 @@
   grid-row-end: 4;
   grid-column-start: 5;
   grid-column-end: 6;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 4px;
+}
+
+.dropoff-time {
+    display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 4px;
+}
+
+.date {
+    color: #7b7b7b;
+    font-size: 10px;
+    font-weight: 500;
+}
+
+.time {
+    font-size: 12px;
+    text-align: center;
+    width: 5em;
 }
 
 .dropoff-time {
@@ -135,6 +171,9 @@
   grid-row-end: 9;
   grid-column-start: 3;
   grid-column-end: 6;
+  right: 0;
+  bottom: 0;
+  position: absolute;
 }  
 
 .pickup-button {
