@@ -1,8 +1,8 @@
 import React, { useState, useEffect} from 'react';
 import './Order.css';
-import { OrderProps } from '../../types/types';
+import { OrderProps, ResumeButtonClickHandler } from '../../types/types';
 
-export const Order: React.FC<OrderProps> = ({ orderData }) => {
+export const Order: React.FC<OrderProps & { onResumeButtonClick: ResumeButtonClickHandler }> = ({ orderData, onResumeButtonClick  }) => {
     const { order_number, type, status_string, destinations, status_class } = orderData;
     const pickupAddress = destinations[0].address;
     const dropoffAddress = destinations[1].address;
@@ -98,7 +98,7 @@ export const Order: React.FC<OrderProps> = ({ orderData }) => {
                             {`Start pickup in ${timeRemaining}`}  
                         </button>
                     )}
-                    <button className='resume-button'>
+                    <button className='resume-button' onClick={onResumeButtonClick}>
                         Resume
                         <img src='/eye.svg' alt='Eye icon' className='Eye-icon'/>
                     </button>

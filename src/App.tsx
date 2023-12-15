@@ -5,11 +5,13 @@ import { MenuBar } from './components/MenuBar/MenuBar';
 import { FilterOrders } from './components/FilterOrders/FilterOrders';
 import { Order } from './components/Order/Order';
 import { OrderType } from './types/types';
+import { OrderDetails } from './components/OrderDetails/OrderDetails';
 
 function App() {
   //const [orders, setOrders] = useState<OrderType[]>([]);
   const [allOrders, setAllOrders] = useState<OrderType[]>([]);
   const [searchTerm, setSearchTerm] = useState<string>("");
+  const [view, setView] = useState<'orders' | 'details'>('orders');
 
     useEffect(() => {
       const fetchData = async () => {
@@ -30,13 +32,25 @@ function App() {
 
     const filteredOrders = allOrders.filter(order => order.order_number.includes(searchTerm));
 
+    const handleResumeButtonClick = () => {
+      setView('details');
+    };
+
+    const handleArrowButtonClick = () => {
+      setView('orders');
+    };
+
   return (
     <>
-      <MenuBar />
+      <MenuBar title={view === 'orders' ? 'Cargo Orders' : 'Cargo Details'} onArrowButtonClick={handleArrowButtonClick} />
       <FilterOrders handleSearchChange={handleSearchChange}/>
-      {filteredOrders.map((order) => (
-        <Order key={order._id} orderData={order} />
-      ))}
+      {view === 'orders' ? (
+        filteredOrders.map((order) => (
+          <Order key={order._id} orderData={order} onResumeButtonClick={handleResumeButtonClick}/>
+        ))
+      ) : (
+        <OrderDetails />
+      )} 
     </>
   );
 }

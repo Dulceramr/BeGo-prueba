@@ -19,3 +19,7 @@
     color: white;
 }
 
+.button-arrow {
+    background-color: transparent;
+    border: none;
+}

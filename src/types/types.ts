@@ -16,3 +16,7 @@ export interface OrderType {
 export interface OrderProps {
     orderData: OrderType;
 }
+
+export interface ResumeButtonClickHandler {
+  (): void;
+}
