@@ -7,14 +7,16 @@ import { Order } from './components/Order/Order';
 import { OrderType } from './types/types';
 
 function App() {
-  const [orders, setOrders] = useState<OrderType[]>([]);
+  //const [orders, setOrders] = useState<OrderType[]>([]);
+  const [allOrders, setAllOrders] = useState<OrderType[]>([]);
+  const [searchTerm, setSearchTerm] = useState<string>("");
 
     useEffect(() => {
       const fetchData = async () => {
         try {
           const response = await axios.get('https://129bc152-6319-4e38-b755-534a4ee46195.mock.pstmn.io/orders/upcoming');
-          setOrders(response.data.result);
-          console.log(orders);
+          setAllOrders(response.data.result);
+          console.log(allOrders);
         } catch (error) {
           console.error("Error fetching data:", error);
         }
@@ -22,11 +24,17 @@ function App() {
       fetchData();
     }, []);
 
+    const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+      setSearchTerm(event.target.value.toUpperCase());
+    };
+
+    const filteredOrders = allOrders.filter(order => order.order_number.includes(searchTerm));
+
   return (
     <>
       <MenuBar />
-      <FilterOrders />
-      {orders.map((order) => (
+      <FilterOrders handleSearchChange={handleSearchChange}/>
+      {filteredOrders.map((order) => (
         <Order key={order._id} orderData={order} />
       ))}
     </>

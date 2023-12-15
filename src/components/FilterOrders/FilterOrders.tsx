@@ -1,7 +1,12 @@
 import React from 'react';
 import './FilterOrders.css';
 
-export const FilterOrders: React.FC = () => {
+interface FilterOrdersProps {
+  handleSearchChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+}
+
+export const FilterOrders: React.FC<FilterOrdersProps> = ({ handleSearchChange }) => {
+  
   return (
     <div className='filter-container'>
         <div className='state-order'>
@@ -11,7 +16,11 @@ export const FilterOrders: React.FC = () => {
         </div>
         <div className='search'>
             <img src='/search.svg' alt='Search' className='search-image' />
-            <input className='search-input' placeholder='Search..'></input>
+            <input
+               className='search-input'
+               placeholder='Search..'
+               onChange={handleSearchChange}
+            />
         </div>
     </div>
   )
