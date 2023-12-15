@@ -1,7 +1,7 @@
 .filter-container {
     display: flex;
     position: relative;
-    top: 7rem;
+   /*  top: 7rem; */
     /* left: 8.33%;
     right: 8.33%;
     width: 83.3%; */
@@ -11,6 +11,8 @@
     overflow: hidden;
     padding-left: 8vw;
     padding-right: 9vw;
+    margin-top: 2.4rem;
+    margin-bottom: 2.6rem;
 }
 
 .state-order {
@@ -31,7 +33,7 @@
 }
 
 .search {
-    margin-top: 2rem;
+    margin-top: 3rem;
     border-bottom: #7B7B7B solid 1px;
     padding-bottom: 15px;
     width: 87%;

@@ -3,7 +3,7 @@ import './Order.css';
 import { OrderProps } from '../../types/types';
 
 export const Order: React.FC<OrderProps> = ({ orderData }) => {
-    const { order_number, type, status_string, destinations } = orderData;
+    const { order_number, type, status_string, destinations, status_class } = orderData;
     const pickupAddress = destinations[0].address;
     const dropoffAddress = destinations[1].address;
 
@@ -26,9 +26,25 @@ export const Order: React.FC<OrderProps> = ({ orderData }) => {
         console.log("Navegar")
     };
 
+    const formatDate = (timestamp: number) => {
+        const date = new Date(timestamp);
+        const options = {
+            year: 'numeric',
+            month: 'numeric',
+            day: 'numeric',
+            hour: 'numeric',
+            minute: 'numeric',
+            hour12: false,
+        } as const;
+        return date.toLocaleString('en-US', options);
+    };
+
   return (
     <div className='order-container'>
-        <p>Order #{order_number}</p>
+        <p>
+            <span className='order-text'>Order # </span>
+            <span className='order-number'>{order_number}</span>
+        </p>
         <div className='orders-content'>
             <div className='order-information'>
                 <div className='transport-container'>
@@ -36,7 +52,10 @@ export const Order: React.FC<OrderProps> = ({ orderData }) => {
                         <img src='/freight.svg' alt='Freight icon' className='freight-icon'/>
                         {type}
                     </div>
-                    <div className='status'>{status_string}</div>
+                    <div className='status-container'>
+                        <div className={`status-dot ${status_class}`}></div>
+                        <div className='status'>{status_string}</div>
+                    </div>
                 </div>
                 <div className='transport-date-information'>
                     <div className='transportation-image'></div>
@@ -45,17 +64,15 @@ export const Order: React.FC<OrderProps> = ({ orderData }) => {
                         <span className='street'>{pickupAddress}</span>
                     </div>
                     <div className='pickup-time'>
-                        <span className='date'>01/04/23</span>
-                        <span className='time'>10:45</span>
+                        <span className='date'>{formatDate(destinations[0].start_date)}</span>
                     </div>
                     <div className='pickup-dropoff dropoff'>DROPOFF</div>
                     <div className='dropoff-adress adress'>
                         <span className='street'>{dropoffAddress}</span>
                     </div>
                     <div className='dropoff-time'>
-                        <span className='date'>01/04/23</span>
-                        <span className='time'>17:30</span>
-                    </div>
+                         <span className='date'>{formatDate(destinations[1].end_date)}</span>
+                     </div>
                     {buttonEnabled && (
                         <button 
                         className='pickup-button'
@@ -73,5 +90,5 @@ export const Order: React.FC<OrderProps> = ({ orderData }) => {
             </div>
         </div>
     </div>
-  )
-}
+  );
+};

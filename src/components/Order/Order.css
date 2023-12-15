@@ -1,7 +1,7 @@
 
 .order-container {
     color: white;
-    top: 17rem;
+    /* top: 17rem; */
     position: relative;
     /* left: 8.33%;
     right: 8.33%;
@@ -11,6 +11,7 @@
     overflow: hidden;
     margin-left: 8vw;
   margin-right: 8vw;
+  margin-bottom: 2.6rem;
 }
 
 .orders-content {
@@ -181,4 +182,34 @@
   grid-row-end: 9;
   grid-column-start: 1;
   grid-column-end: 3;
+}
+
+.blue-dot-bg {
+  background-color: #0094ff;
+}
+
+.grey-dot-bg {
+ background-color: #989898;
+}
+
+.status-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 1em;
+}
+
+.status-container {
+  width: 12em;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.order-number{
+  font-weight: bolder;
+}
+
+.order-text {
+  font-weight: lighter;
 }
