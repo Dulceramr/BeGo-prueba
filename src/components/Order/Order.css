@@ -18,12 +18,6 @@
     margin-top: 2rem;
 }
 
-.order-information {
-    background-color: linear-gradient(45deg, #080C0F 0%, rgba(39,39,39,0) 100%);
-    border: #7B7B7B solid 1px;
-    border-radius: 25px;
-}
-
 .transport-container {
     padding: 1em;
     display: flex;
@@ -131,8 +125,8 @@
 }
 
 .pickup-time {
-    grid-row-start: 3;
-  grid-row-end: 4;
+    grid-row-start: 2;
+  grid-row-end: 3;
   grid-column-start: 5;
   grid-column-end: 6;
   display: flex;
@@ -152,17 +146,20 @@
     color: #7b7b7b;
     font-size: 10px;
     font-weight: 500;
+    width: 5em;
+    text-align: end;
+    margin-top: 5px;
 }
 
 .time {
     font-size: 12px;
-    text-align: center;
-    width: 5em;
+    text-align: end;
+    width: 4em;
 }
 
 .dropoff-time {
-    grid-row-start: 6;
-  grid-row-end: 7;
+    grid-row-start: 5;
+  grid-row-end: 6;
   grid-column-start: 5;
   grid-column-end: 6;
 }
@@ -212,4 +209,19 @@
 
 .order-text {
   font-weight: lighter;
+}
+
+.street {
+  margin-top: 6px;
+}
+
+.transportation-image {
+  width: 2em;
+  margin-left: 17px;
+}
+
+.order-information {
+  background: linear-gradient(45deg, #0e1113, #0e1013);
+  border: #7B7B7B solid 1px;
+  border-radius: 25px;
 }

@@ -7,6 +7,9 @@ export const Order: React.FC<OrderProps> = ({ orderData }) => {
     const pickupAddress = destinations[0].address;
     const dropoffAddress = destinations[1].address;
 
+    const pickupAddressShort = pickupAddress.slice(0, 35) + ' ...';
+    const dropoffAddressShort = dropoffAddress.slice(0, 35) + ' ...';
+
     const [timeRemaining, setTimeRemaining] = useState<number>(0);
     const [buttonEnabled, setButtonEnabled] = useState<boolean>(false);
 
@@ -28,15 +31,28 @@ export const Order: React.FC<OrderProps> = ({ orderData }) => {
 
     const formatDate = (timestamp: number) => {
         const date = new Date(timestamp);
-        const options = {
-            year: 'numeric',
-            month: 'numeric',
-            day: 'numeric',
+        
+        const dayOptions = {
+            year: '2-digit',
+            month: '2-digit',
+            day: '2-digit',
+        } as const;
+        const dayString = date.toLocaleString('en-US', dayOptions);
+    
+        const timeOptions = {
             hour: 'numeric',
             minute: 'numeric',
             hour12: false,
         } as const;
-        return date.toLocaleString('en-US', options);
+        const timeString = date.toLocaleString('en-US', timeOptions);
+    
+        return (
+            <>
+                <span className='date'>{dayString}</span>
+                <br />
+                <span className='time'>{timeString}</span>
+            </>
+        );
     };
 
   return (
@@ -58,21 +74,21 @@ export const Order: React.FC<OrderProps> = ({ orderData }) => {
                     </div>
                 </div>
                 <div className='transport-date-information'>
-                    <div className='transportation-image'></div>
+                    <img src= '/transport.png' alt='Imagen de medio de transporte' className='transportation-image' />
                     <div className='pickup-dropoff pickup'>PICKUP</div>
                     <div className='pickup-adress adress'>
-                        <span className='street'>{pickupAddress}</span>
+                        <span className='street'>{pickupAddressShort}</span>
                     </div>
                     <div className='pickup-time'>
-                        <span className='date'>{formatDate(destinations[0].start_date)}</span>
-                    </div>
+                        {formatDate(destinations[0].start_date)}
+                    </div>                  
                     <div className='pickup-dropoff dropoff'>DROPOFF</div>
                     <div className='dropoff-adress adress'>
-                        <span className='street'>{dropoffAddress}</span>
+                        <span className='street'>{dropoffAddressShort}</span>
                     </div>
                     <div className='dropoff-time'>
-                         <span className='date'>{formatDate(destinations[1].end_date)}</span>
-                     </div>
+                        {formatDate(destinations[1].end_date)}
+                    </div>
                     {buttonEnabled && (
                         <button 
                         className='pickup-button'
