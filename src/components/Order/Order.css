@@ -1,84 +1,79 @@
-
 .order-container {
-    color: white;
-    /* top: 17rem; */
-    position: relative;
-    /* left: 8.33%;
-    right: 8.33%;
-    width: 83.3%; */
-    height: auto;
-    max-width: 100%;
-    overflow: hidden;
-    margin-left: 8vw;
+  color: white;
+  position: relative;
+  height: auto;
+  max-width: 100%;
+  overflow: hidden;
+  margin-left: 8vw;
   margin-right: 8vw;
   margin-bottom: 2.6rem;
 }
 
 .orders-content {
-    margin-top: 2rem;
+  margin-top: 2rem;
 }
 
 .transport-container {
-    padding: 1em;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  padding: 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .freight-icon {
-    padding-right: 10px;
+  padding-right: 10px;
 }
 
 .transport-vehicle {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 .status {
-    font-size: 12px;
-    font-weight: 500;
-    text-align: right;
+  font-size: 12px;
+  font-weight: 500;
+  text-align: right;
 }
 
 .pickup-dropoff {
-    color: #7b7b7b;
-    font-size: 10px;
-    font-weight: 500;
+  color: #7b7b7b;
+  font-size: 10px;
+  font-weight: 500;
 }
 
 .resume-button {
-    border-radius: 21.93px;
-    background-color: #FFFF00;
-    box-shadow: inset -2px -2px 4px 0 #C2C200, inset 2px 2px 4px 0 #FFFF80;
-    width: 130px;
-    height: 43.87px;
-    font-size: 14px;
-    font-weight: 900;
+  border-radius: 21.93px;
+  background-color: #ffff00;
+  box-shadow: inset -2px -2px 4px 0 #c2c200, inset 2px 2px 4px 0 #ffff80;
+  width: 130px;
+  height: 43.87px;
+  font-size: 14px;
+  font-weight: 900;
 }
 
 .Eye-icon {
-    margin: 4px 0 0 9px;
+  margin: 4px 0 0 9px;
 }
 
 .resume-text {
-    margin-top: 5px;
+  margin-top: 5px;
 }
 
 .pickup-button {
-    border: #7B7B7B solid 1px;
-    border-radius: 25px;
-    width: 199px;
-    height: 50px;
-    background-color: transparent;
-    color: white;
+  border: #7b7b7b solid 1px;
+  border-radius: 25px;
+  width: 199px;
+  height: 50px;
+  background-color: transparent;
+  color: white;
 }
 
 .transport-date-information {
-    border-top: #7B7B7B solid 1px;
-    padding: 0;
-    height: 15rem;
-    display: grid;
-    grid-template-columns: 16.66% 40.28% 13.89% 8.3% 20.83%;
-    grid-template-rows: 15.38% 4.8% 14.42% 11.54% 3.85% 14.42% 15.38% 20.19%;
+  border-top: #7b7b7b solid 1px;
+  padding: 0;
+  height: 15rem;
+  display: grid;
+  grid-template-columns: 16.66% 40.28% 13.89% 8.3% 20.83%;
+  grid-template-rows: 15.38% 4.8% 14.42% 11.54% 3.85% 14.42% 15.38% 20.19%;
 }
 
 .transportation-image {
@@ -89,43 +84,41 @@
 }
 
 .pickup {
-    grid-row-start: 2;
+  grid-row-start: 2;
   grid-row-end: 3;
   grid-column-start: 2;
   grid-column-end: 5;
 }
 
 .pickup-adress {
-    grid-row-start: 3;
+  grid-row-start: 3;
   grid-row-end: 4;
   grid-column-start: 2;
   grid-column-end: 4;
-  
 }
 
 .adress {
-    display: flex;
+  display: flex;
   flex-direction: column;
   font-size: 12px;
 }
 
-
 .dropoff {
-    grid-row-start: 5;
+  grid-row-start: 5;
   grid-row-end: 6;
   grid-column-start: 2;
   grid-column-end: 3;
 }
 
-.dropoff-adress{
-    grid-row-start: 6;
+.dropoff-adress {
+  grid-row-start: 6;
   grid-row-end: 7;
   grid-column-start: 2;
   grid-column-end: 4;
 }
 
 .pickup-time {
-    grid-row-start: 2;
+  grid-row-start: 2;
   grid-row-end: 3;
   grid-column-start: 5;
   grid-column-end: 6;
@@ -136,46 +129,46 @@
 }
 
 .dropoff-time {
-    display: flex;
+  display: flex;
   flex-direction: column;
   align-items: flex-start;
   padding-top: 4px;
 }
 
 .date {
-    color: #7b7b7b;
-    font-size: 10px;
-    font-weight: 500;
-    width: 5em;
-    text-align: end;
-    margin-top: 5px;
+  color: #7b7b7b;
+  font-size: 10px;
+  font-weight: 500;
+  width: 5em;
+  text-align: end;
+  margin-top: 5px;
 }
 
 .time {
-    font-size: 12px;
-    text-align: end;
-    width: 4em;
+  font-size: 12px;
+  text-align: end;
+  width: 4em;
 }
 
 .dropoff-time {
-    grid-row-start: 5;
+  grid-row-start: 5;
   grid-row-end: 6;
   grid-column-start: 5;
   grid-column-end: 6;
 }
 
 .resume-button {
-    grid-row-start: 8;
+  grid-row-start: 8;
   grid-row-end: 9;
   grid-column-start: 3;
   grid-column-end: 6;
   right: 0;
   bottom: 0;
   position: absolute;
-}  
+}
 
 .pickup-button {
-    grid-row-start: 8;
+  grid-row-start: 8;
   grid-row-end: 9;
   grid-column-start: 1;
   grid-column-end: 3;
@@ -186,7 +179,7 @@
 }
 
 .grey-dot-bg {
- background-color: #989898;
+  background-color: #989898;
 }
 
 .status-dot {
@@ -203,7 +196,7 @@
   justify-content: end;
 }
 
-.order-number{
+.order-number {
   font-weight: bolder;
 }
 
@@ -222,6 +215,6 @@
 
 .order-information {
   background: linear-gradient(45deg, #0e1113, #0e1013);
-  border: #7B7B7B solid 1px;
+  border: #7b7b7b solid 1px;
   border-radius: 25px;
 }

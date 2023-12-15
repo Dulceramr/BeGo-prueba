@@ -20,3 +20,12 @@ export interface OrderProps {
 export interface ResumeButtonClickHandler {
   (): void;
 }
+
+export interface FilterOrdersProps {
+  handleSearchChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+}
+
+export interface MenuBarProps {
+  title: string;
+  onArrowButtonClick: () => void;
+}

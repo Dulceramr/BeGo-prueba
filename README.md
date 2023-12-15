@@ -1,30 +1,32 @@
-# React + TypeScript + Vite
+# BeGo Cargo Orders App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto es una prueba técnica desarrollada para la compañía BeGo. La aplicación web permite visualizar las órdenes de transporte, proporcionando información detallada sobre cada orden. La aplicación está construida utilizando React, Vite y TypeScript.
 
-Currently, two official plugins are available:
+## Características
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Vista de Cargo Orders:** La página principal de la aplicación muestra una tarjeta para cada orden de transporte. Cada tarjeta contiene información clave, como número de orden, tipo, estado, dirección de pickup y dropoff, así como la hora y fecha asociada.
 
-## Expanding the ESLint configuration
+- **Filtrado por Número de Orden:** La aplicación proporciona un buscador que permite filtrar las órdenes según el número de orden. Esto facilita la búsqueda de órdenes específicas.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **Detalles de la Orden (No implementado):** La aplicación tiene una funcionalidad para ver detalles adicionales de una orden específica. Sin embargo, esta característica aún no ha sido implementada en este proyecto.
 
-- Configure the top-level `parserOptions` property like this:
+## Tecnologías Utilizadas
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+- [React](https://reactjs.org/)
+- [Vite](https://vitejs.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Vista General - Cargo Orders
+
+Esta captura de pantalla resalta el buscador diseñado para filtrar las órdenes según su número de orden. Proporciona a los usuarios la capacidad de ingresar un número de orden y acceder rápidamente a la información específica que están buscando.
+
+![Vista de Cargo Orders](/public/cargo-orders.png)
+
+En esta vista, se presentan tarjetas que representan las órdenes de transporte. Cada tarjeta contiene información crucial, incluyendo el número de orden, tipo de transporte, estado, dirección de pickup y dropoff, así como la fecha y hora de la orden.
+
+![Vista de Cargo Orders](/public/cargo-orders2.png)
+
+## Desarrolladora
+- [Dulce Ramírez 👩🏻‍💻🐈 ](https://github.com/Dulceramr)
+
+**¡Gracias por revisar mi proyecto!🚀✨**

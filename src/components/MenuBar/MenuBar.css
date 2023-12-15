@@ -1,25 +1,25 @@
 .menu-bar {
-    display: flex;
-    position: relative;
-    justify-content: space-between;
-    max-width: 100%;
-    overflow: hidden;
-    margin-left: 8vw;
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  max-width: 100%;
+  overflow: hidden;
+  margin-left: 8vw;
   margin-right: 8vw;
   margin-top: 4rem;
 }
 
 .arrow {
-    transform: rotate(-90deg);
+  transform: rotate(-90deg);
 }
 
 .title {
-    font-size: 18px;
-    font-weight: 500;
-    color: white;
+  font-size: 18px;
+  font-weight: 500;
+  color: white;
 }
 
 .button-arrow {
-    background-color: transparent;
-    border: none;
+  background-color: transparent;
+  border: none;
 }
